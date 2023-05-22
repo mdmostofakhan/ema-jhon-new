@@ -6,9 +6,9 @@ const Cart = ({cart}) => {
 
     console.log(cart)
 
- let total = 0;
- let totalShipping = 0;
- let quantity = 0;
+    let total = 0;
+    let totalShipping = 0;
+    let quantity = 0;
  for(const product of cart){
     // if(product.quantity === 0){
     //     product.quantity = 1;

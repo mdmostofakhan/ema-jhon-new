@@ -4,6 +4,8 @@
 }
 .products-container{
     display: grid;
+    margin-left: 40px;
+    margin-top: 20px;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
