@@ -6,6 +6,12 @@
 
 }
 
-/* .cart p{
-    font-size: 17px;
-} */
+.btn-clear-cart{
+    display: flex;
+    margin: 10px auto;
+    width: 90%;
+    color: white;
+    border-radius: 8px;
+    background-color: red;
+    justify-content: space-between;
+}

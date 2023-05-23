@@ -3,7 +3,7 @@ import './Shop.css'
 import Producs from '../produc/Producs'
 // import Producs from '../produc/Producs';
 import Cart from '../cart/Cart';
-import { addToDb, getShoppingCart } from '../../assets/utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../assets/utilities/fakedb';
 
 const Shop = () => {
     const [products, setProducts] = useState([])
@@ -57,7 +57,11 @@ const Shop = () => {
         addToDb(product.id)
        }
     
-   
+       const handleClearCart = () => {
+            setCart([]);
+            deleteShoppingCart();
+       }
+    
     return (
         <div className='shop-container'>
             <div className="products-container">
@@ -71,7 +75,10 @@ const Shop = () => {
                }
             </div>
             <div className="cart-container">
-               <Cart cart={cart}></Cart>
+               <Cart
+                cart={cart}
+                handleClearCrat={handleClearCart}
+                ></Cart>
             </div>
         </div>
     );
